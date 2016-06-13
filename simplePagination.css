@@ -39,7 +39,7 @@ span.ellipse.clickable {
 	Compact Theme Styles
 \*------------------------------------*/
 
-.compact-theme a, .compact-theme span {
+.compact-theme .page-link, .compact-theme span {
 	float: left;
 	color: #333;
 	font-size:14px;
@@ -60,7 +60,7 @@ span.ellipse.clickable {
 	background: linear-gradient(top, #ffffff 0%,#efefef 100%); /* W3C */
 }
 
-.compact-theme a:hover {
+.compact-theme .page-link:hover {
 	text-decoration: none;
 	background: #efefef; /* Old browsers */
 	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); /* FF3.6+ */
@@ -71,12 +71,12 @@ span.ellipse.clickable {
 	background: linear-gradient(top, #efefef 0%,#bbbbbb 100%); /* W3C */
 }
 
-.compact-theme li:first-child a, .compact-theme li:first-child span {
+.compact-theme li:first-child .page-link, .compact-theme li:first-child span {
 	border-left: 1px solid #AAA;
 	border-radius: 3px 0 0 3px;
 }
 
-.compact-theme li:last-child a, .compact-theme li:last-child span {
+.compact-theme li:last-child .page-link, .compact-theme li:last-child span {
 	border-radius: 0 3px 3px 0;
 }
 
@@ -101,7 +101,7 @@ span.ellipse.clickable {
 	Light Theme Styles
 \*------------------------------------*/
 
-.light-theme a, .light-theme span {
+.light-theme .page-link, .light-theme span {
 	float: left;
 	color: #666;
 	font-size:14px;
@@ -123,7 +123,7 @@ span.ellipse.clickable {
 	background: linear-gradient(top, #ffffff 0%,#efefef 100%); /* W3C */
 }
 
-.light-theme a:hover {
+.light-theme .page-link:hover {
 	text-decoration: none;
 	background: #FCFCFC;
 }
@@ -149,7 +149,7 @@ span.ellipse.clickable {
 	Dark Theme Styles
 \*------------------------------------*/
 
-.dark-theme a, .dark-theme span {
+.dark-theme .page-link, .dark-theme span {
 	float: left;
 	color: #CCC;
 	font-size:14px;
@@ -171,7 +171,7 @@ span.ellipse.clickable {
 	background: linear-gradient(top, #555 0%,#333 100%); /* W3C */
 }
 
-.dark-theme a:hover {
+.dark-theme .page-link:hover {
 	text-decoration: none;
 	background: #444;
 }

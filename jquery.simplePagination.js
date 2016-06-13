@@ -3,6 +3,8 @@
 * A simple jQuery pagination plugin.
 * http://flaviusmatis.github.com/simplePagination.js/
 *
+* Modified by valery@seekingalpha.com. (Added `useSpans` option)
+*
 * Copyright 2012, Flavius Matis
 * Released under the MIT license.
 * http://flaviusmatis.github.com/license.html
@@ -33,6 +35,7 @@
 				invertPageOrder: false,
 				useStartEdge : true,
 				useEndEdge : true,
+				useSpans : true,
 				onPageClick: function(pageNumber, event) {
 					// Callback triggered when a page is clicked
 					// Page number is given as an optional parameter
@@ -305,7 +308,11 @@
 				}
 				$link = $('<span class="current">' + (options.text) + '</span>');
 			} else {
-				$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="page-link">' + (options.text) + '</a>');
+				if (o.useSpans) {
+					$link = $('<span class="page-link">' + (options.text) + '</span>');
+				} else {
+					$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="page-link">' + (options.text) + '</a>');
+				}
 				$link.click(function(event){
 					return methods._selectPage.call(self, pageIndex, event);
 				});
