@@ -35,7 +35,7 @@
 				invertPageOrder: false,
 				useStartEdge : true,
 				useEndEdge : true,
-				useSpans : true,
+				useSpans : false,
 				onPageClick: function(pageNumber, event) {
 					// Callback triggered when a page is clicked
 					// Page number is given as an optional parameter
@@ -286,6 +286,11 @@
 
 		_appendItem: function(pageIndex, opts) {
 			var self = this, options, $link, o = self.data('pagination'), $linkWrapper = $('<li></li>'), $ul = self.find('ul');
+
+                        // Don't draw the pager if there's only one page
+			if (o.pages <= 1) {
+				return;
+			}
 
 			pageIndex = pageIndex < 0 ? 0 : (pageIndex < o.pages ? pageIndex : o.pages - 1);
 
